@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('../fonts/Press_Start_2P/PressStart2P-Regular.woff2') format('woff2'),
+        url('../fonts/Press_Start_2P/PressStart2P-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Light.woff2') format('woff2'),
+        url('../fonts/Roboto/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: bisque;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.app {
+	height: 100vh;
+	display: flex;
+}
+
+.container {
+	background-color: cornsilk;
+	border: 1px solid #9f9595;
+	border-radius: 5px;
+	max-width: 560px;
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+}
+
+.title {
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.subtitle {
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 16px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.info__group {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.info__group-number {
+	font-size: 26px;
+	color: #ff5722;
+	margin-left: 10px;
+}
+
+.info__group__record {
+	display: flex;
+	flex-direction: column;
+}
+
+.info__btn {
+	font-size: 12px;
+	cursor: pointer;
+	background-color: #fff;
+	border: 1px solid #9f9595;
+	transition: opacity .3s ease;
+}
+
+.info__btn:hover {
+	opacity: .5;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .5);
+	cursor: pointer;
+	transition: opacity .3s ease;
+}
+
+.modal--active {
+	display: block;
+}
+
+.modal__info-win {
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #9f9595;
+	border-radius: 5px;
+	padding: 50px 20px 20px 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity .3s ease;
+	cursor: default;
+}
+
+.modal-close {
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid #9f9595;
+	border-radius: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	top: 5px;
+	right: 5px;
+}
+
+.modal__info-win-title {
+	text-align: center;
+	margin-top: 0;
+}
+
+.restart-btn {
+	background-color: #ff5722;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color .3s ease;
+}
+
+.restart-btn:hover {
+	background-color: #f17954;
+}
+
+.modal__info-win-item {
+	margin-bottom: 10px;
+}
+
+.modal__info-win-item:last-child {
+	margin-bottom: 0;
+}
+
+.num-form {
+	border: 1px solid #9f9595;
+	border-radius: 5px;
+	font-size: 16px;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.num-form__group {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.num-form__input {
+	padding: 10px;
+}
+
+.num-form__answers-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.num-form__answer {
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.num-form__answer--less, .num-form__answer--big {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	position: relative;
+}
+
+.num-form__answer--less {
+	padding-right: 40px;
+	left: -100%;
+	transition: left .3s ease;
+}
+
+.num-form__answer--less-active {
+	left: 0;
+}
+
+.num-form__answer--big {
+	right: -100%;
+	padding-left: 40px;
+	transition: right .3s ease;
+}
+
+.num-form__answer--big-active {
+	right: 0;
+}
+
+.num-form__answer--less:after {
+	content: '<';
+	position: absolute;
+    font-family: 'Press Start 2P', sans-serif;
+	font-size: 40px;
+	color: #ff5722;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+
+.num-form__answer--big:before {
+	content: '>';
+	position: absolute;
+	font-family: 'Press Start 2P', sans-serif;
+	font-size: 40px;
+	color: #ff5722;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.num-form__answer-important {
+	font-weight: bold;
+	color: #ff5722;
+}
+
+.num-form__btn {
+	background-color: #ff5722;
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	color: #fff;
+	font-weight: bold;
+	width: 100%;
+	font-size: 18px;
+	transition: background-color .3s ease;
+}
+
+.num-form__btn:hover {
+	background-color: #f17954;
+}
+

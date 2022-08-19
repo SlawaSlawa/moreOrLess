@@ -1,0 +1,44 @@
+@media (max-width: 560px) {
+	.title {
+		font-size: 28px;
+	}
+
+	.subtitle {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 482px) {
+	.num-form__answer {
+		font-size: 16px;
+		padding: 6px;
+	}
+	.num-form__answer--less, .num-form__answer--big {
+		font-size: 14px;
+	}
+	.num-form__answer--less {
+		text-align: left;
+		padding-right: 24px;
+	}
+	.num-form__answer--big {
+		text-align: right;
+		padding-left: 24px;
+	}
+
+	.num-form__answer--less:after, .num-form__answer--big:before {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 320px) {
+	.title {
+		font-size: 20px;
+	}
+	.subtitle {
+		font-size: 16px;
+	}
+
+	.num-form__answer--less, .num-form__answer--big {
+	    font-size: 10px;
+	}
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра: Больше-Меньше</title>
+    <link rel="stylesheet" href="libs/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+    <div class="app" id="app">
+
+        <div class="modal">
+            <div class="modal__info-win">
+                    <button class="modal-close">X</button>
+                    <h3 class="modal__info-win-title">
+                        Поздравление!!!
+                    </h3>
+                    <div class="modal__info-win-item">
+                        Правильный ответ: <span class="modal__info-answer">5</span>
+                    </div>
+                    <div class="modal__info-win-item">
+                        Количество попыток: <span class="modal__info-trys">5</span>
+                    </div>
+                    <div class="modal__info-win-item">
+                        <button class="restart-btn">
+                            Начать заново?
+                        </button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+        	<h1 class="title">Игра:<br>Больше-Меньше</h1>
+        	<h2 class="subtitle">
+        		Угадайте загаданное число от 0 до 10
+        	</h2>
+
+        	<div class="info">
+        		<div class="info__group info__group--attempts">
+                    Попытка: <span class="info__group-number">9</span>
+                </div>
+        		<div class="info__group info__group__record">
+                    Рекорд: <span class="info__group-number" id="record">5</span>
+                    <button class="info__btn">Сбросить рекорд</button>
+                </div>
+        	</div>
+
+        	<form class="num-form">
+        		<div class="num-form__group">
+        			<label for="inputNum" class="num-form__label">Ваше число:</label>
+        			<input type="number" class="num-form__input" id="inputNum">
+        		</div>
+                <div class="trys">_</div>
+
+        		<div class="num-form__answers-wrap">
+                        <div class="num-form__answer num-form__answer--less">
+                            Загаданное число <span class="num-form__answer-important">больше</span> вашего
+                        </div>
+                    
+                    
+                        <div class="num-form__answer" id="answer">?</div>
+                    
+                    
+                        <div class="num-form__answer num-form__answer--big">
+                            Загаданное число <span class="num-form__answer-important">меньше</span> вашего
+                        </div>
+                    
+        		</div>
+        		
+        		<button class="num-form__btn">Ответ</button>
+        	</form>
+        </div>
+    </div>
+</body>
+</html>
